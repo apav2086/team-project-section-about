@@ -1,27 +1,4 @@
 @use 'variables';
-.container {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-
-    @media screen and (min-width: 320px) {
-        width: 320px;
-    }
-
-    @media screen and (min-width: 768px) {
-        width: 768px;
-    }
-
-    @media (min-width: 1280px) {
-        width: 1280px;
-    }
-}
-
-.about {
-    background-color: variables.$backgroundNeutralColor;
-
-}
 
 .about__label {
     font-family: "Titan One", sans-serif;
@@ -50,102 +27,158 @@
     color: variables.$textAccentColor;
     font-weight: 400;
     text-align: center;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 34px;
     line-height: calc(38.93/34);
+    letter-spacing: 0.04em;
+    width: 200px;
+    height: 76px;
+    margin: 15px auto;
+
+
+    }
+   
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
         font-size: 48px;
         line-height: calc(54.96/48);
+        letter-spacing: 0.04em;
     }
 
     @media screen and (min-width: 1280px) {
         font-size: 58px;
         line-height: calc(66.41/58);
+        letter-spacing: 0.06em;
     }
 
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+
     .about__container {
+
         display: flex;
-        justify-content: space-around;
-      
+       
+    @media screen and (max-width: 767px) {
+        flex-direction: column; 
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        justify-content: space-around;
+    }
+        @media screen and (min-width: 1280px) {
+                background-image: url('../images/about-milk-splash-mobile-2x.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+    
+            }
+}
     .about__cow {
-    margin-left: 32px;
-    margin-right: 32px;
-     
+    @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        width: 336px;
+        }
+        @media screen and (min-width: 1280px) {
+            width: 501px;
+        }
 }
 .text {
-    font-size: 14px;
-    line-height: calc(26.44/14);
     display: flex;
     flex-direction: column;
- 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    padding-right: 80px;
+    background-image: url('../images/about-milk-splash-mobile.png');
+    background-repeat: no-repeat;
+    background-position-y: 71px;
+    }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 334px;
+padding-left: 32px;
+padding-top: 40px;
 }
-
+@media screen and (min-width: 1280px) {
+    letter-spacing: 0.04em;
+    width: 463px;
+    padding-left: 99px;
+    padding-top: 150px;
+}
 }
 .text1 {
     font-family: "DM Sans", sans-serif;
     color: variables.$textPrimaryColor;
     font-weight: 500;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
     line-height: calc(19.44/12);
-    display: block;
+   padding-bottom: 40px;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: block;
+font-size: 14px;
+    line-height: calc(24.64/14);
+    padding-bottom: 40px;
+}
+@media screen and (min-width: 1280px) {
+    display: block;
+    font-size: 16px;
+        line-height: calc(28.16/16);
+        padding-bottom: 32px;
+}
+}
 .text2 {
     font-family: "DM Sans", sans-serif;
     color: variables.$textSecondaryColor;
     font-weight: 500;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 12px;
     line-height: calc(19.44/12);
+    padding-bottom: 20px;
+    }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
     display: block;
-    @media screen  and (min-width: 320px) and (max-width: 767px) {
-            background-image: url('../images/about-milk-splash-mobile.png');
-           background-position: fixed;
+    font-size: 14px;
+    line-height: calc(24.64/14);
+    letter-spacing: 0.04em;
+   
+}
 
-            background-repeat: no-repeat;
-        }
+@media screen and (min-width: 1280px) {
+    display: block;
+    font-size: 14px;
+    line-height: calc(27.16/14);
+ 
+}
 }
 
 
 .read__more {
     font-weight: 700;
-    font-size: 14px;
-    line-height: calc(18.23/14);
+  
     text-align: center;
     letter-spacing: 0.06em;
     color: variables.$titlePrimaryColor;
     background-color: #ffff;
     cursor: pointer;
     display: block;
-    align-items: center;
     border-radius: 22px;
-    padding: 10px 20px;
+    padding-left: 37px;
+    padding-right: 17px;
     border: none;
-    margin-left: 20px;
-    margin-right: 20px;
     width: 176px;
     height: 44px;
-}
-
-@media screen and (min-width: 1280px) {
-    .about__container {
-        display: flex;
-        background-image: url('../images/about-milk-splash-mobile-2x.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        
-    }
-.text1 {
-    
-    font-size: 16px;
-    line-height: calc(28.16/16);
-    display: block;
-}
-.text2 {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
     font-size: 14px;
-    line-height: calc(27.16/14);
-    display: block;
+    line-height: calc(18.23/14);
+    align-self: flex-start;
+    margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: calc(20.83/16);
+ margin-top: 40px;
+margin-bottom: 60px;
 }
 }
